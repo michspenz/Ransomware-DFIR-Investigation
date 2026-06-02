@@ -1,0 +1,12 @@
+type,value,description
+domain,meridian-invoices.com,Phishing infrastructure used to deliver malicious document
+ip,185.220.101.47,C2 server — TLS beaconing observed post-infection
+ip,185.235.81.22,MEGA exfiltration endpoint
+ip,192.168.1.88,Internal pivot target via SMB lateral movement
+domain,g.api.mega.co.nz,MEGA cloud API used for data exfiltration
+onion,lockbitapt6vx57t3eeqjofwgcglmutr3a35nygvokja5uuccip4ykyd.onion,LockBit 2.0 negotiation/payment portal
+file,Invoice_March2024.docm,Malicious macro-enabled Word document — initial access vector
+file,lb_config.json,LockBit configuration file found in %TEMP% — contained exfil target
+hash_artifact,4A9F2E8B-7C31-4D56-A091-F3E28C107B44,Victim ID embedded in ransom note
+malware,LockBit 2.0,Ransomware family responsible for encryption
+extension,.lockbit,File extension appended to all encrypted files
